@@ -20,11 +20,11 @@ COPY src src
 COPY .mvn .mvn
 
 #sdfds
-RUN mvn package -Dmaven.test.skip=true
+RUN mvn clean package -Dmaven.test.skip=true
 
 ENV SERVER_PORT=3000
 
 EXPOSE ${SERVER_PORT}
 
-ENTRYPOINT ["java", "-jar", "target/vttp5_ssf_day17l-0.0.1-SNAPSHOT.jar","--server.port=${SERVER_PORT}"]
+ENTRYPOINT ["java", "-jar", "target/vttp5_ssf_day15workshop-0.0.1-SNAPSHOT.jar","--server.port=${SERVER_PORT}"]
 #can also use mvn spring-boot:run as entrypoint

@@ -18,9 +18,8 @@ public class DataService {
         Random random = new Random();
         int randomInt = random.nextInt(00000000,99999999);
         String randomHex = Integer.toHexString(randomInt);
-        String randomHexString = "TESTING";
 
-        return randomHexString;
+        return randomHex;
     }
 
 
